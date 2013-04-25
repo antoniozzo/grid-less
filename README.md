@@ -23,12 +23,12 @@ This is how you create 3 responsive layouts with Grid-Less and media queries:
 
 #header
 {
-	.col; // Full width column
+	.col; // Full width column on a desktop
 }
 
 #content
 {
-	.col(75%); // A 3/4 column
+	.col(75%); // A 3/4 column on a desktop
 	
 	@media @tablet-landscape { .col(50%); }  // A 1/2 column on a tablet in landscape
 	@media @mobile-landscape { .col; }  // A full width column on a mobile in landscape
@@ -36,7 +36,7 @@ This is how you create 3 responsive layouts with Grid-Less and media queries:
 
 #sidebar
 {
-	.col(25%); // A 1/4 column
+	.col(25%); // A 1/4 column on a desktop
 	
 	@media @tablet-landscape { .col(50%); }  // A 1/2 column on a tablet in landscape
 	@media @mobile-landscape { .col; }  // A full width column on a mobile in landscape
@@ -44,11 +44,11 @@ This is how you create 3 responsive layouts with Grid-Less and media queries:
 
 #footer
 {
-	.col; // Full width column
+	.col; // Full width column on a desktop
 }
 </code></pre>
 
-## Avalibe variables
+## Available variables
 
 You can customize these variables:
 
@@ -58,7 +58,7 @@ You can customize these variables:
 @gutter: 30px; // Gutter width of columns
 </code></pre>
 
-Here is the avalible media queries (Must be used in this order):
+Here is the available media queries (Must be used in this order):
 
 <pre><code>
 @desktop: ~'only screen and (max-width : 1824px)';
