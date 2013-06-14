@@ -5,16 +5,14 @@ With Grid-Less you can create perfect responsive layout in just a few lines of c
 
 ## How to use
 
-Just import grid.less in you less file:
+Just import grid.min.less in you less file:
 
-<pre><code>
-import 'grid.less';
+<pre><code>import 'grid.min.less';
 </code></pre>
 
 This is how you create 3 responsive layouts with Grid-Less and media queries:
 
-<pre><code>
-@max-width: 960px; // A 960 grid
+<pre><code>@max-width: 960px; // A 960 grid
 
 #wrapper
 {
@@ -69,3 +67,5 @@ Here is the available media queries (Must be used in this order):
 @mobile: ~'only screen and (max-width : 321px)';
 @retina: ~'only screen and (-webkit-min-pixel-ratio : 1.5), only screen and (min-pixel-ratio : 1.5)';
 </code></pre>
+
+## Baseline Grid (Documentation coming soon!)
