@@ -1,0 +1,129 @@
+/*
+ * Type
+ *
+ * Edit: Antonio Rizzo 2013-06-14
+ */
+ 
+
+// Font
+
+.fontSize(@size: 0)
+{
+	font-size: 0em + (@baseFontSize + @size) / @baseFontSize;
+}
+
+.lineHeight(@size: 0, @multi: 1)
+{
+	line-height: 0em + @baseLine / (@baseFontSize + @size) * @multi;
+}
+
+
+// Other
+
+.marginTop(@size: 0, @multi: 1) { margin-top: 0em + @baseLine / (@baseFontSize + @size) * @multi; }
+.marginRight(@size: 0, @multi: 1) { margin-right: 0em + @baseLine / (@baseFontSize + @size) * @multi; }
+.marginBottom(@size: 0, @multi: 1) { margin-bottom: 0em + @baseLine / (@baseFontSize + @size) * @multi; }
+.marginLeft(@size: 0, @multi: 1) { margin-left: 0em + @baseLine / (@baseFontSize + @size) * @multi; }
+
+.paddingTop(@size: 1, @border: 0) { padding-top: 0em + @baseLine / (@baseFontSize + @border) * @size; }
+.paddingRight(@size: 1) { padding-right: 0em + @baseLine / @baseFontSize * @size; }
+.paddingBottom(@size: 1, @border: 0) { padding-bottom: 0em + @baseLine / (@baseFontSize + @border) * @size; }
+.paddingLeft(@size: 1) { padding-left: 0em + @baseLine / @baseFontSize * @size; }
+
+.height(@size: 1) { height: 0em + @baseLine / @baseFontSize * @size; }
+.width(@size: 1) { width: 0em + @baseLine / @baseFontSize * @size; }
+
+.minHeight(@size: 1) { min-height: 0em + @baseLine / @baseFontSize * @size; }
+.minWidth(@size: 1) { min-width: 0em + @baseLine / @baseFontSize * @size; }
+
+.top(@size: 1) { top: 0em + @baseLine / @baseFontSize * @size; }
+.bottom(@size: 1) { bottom: 0em + @baseLine / @baseFontSize * @size; }
+.left(@size: 1) { left: 0em + @baseLine / @baseFontSize * @size; }
+.right(@size: 1) { right: 0em + @baseLine / @baseFontSize * @size; }
+
+.box(@size: 1)
+{
+	.paddingTop(@size);
+	.paddingRight(@size);
+	.paddingBottom(@size);
+	.paddingLeft(@size);
+}
+
+
+// Setup
+
+body
+{
+	font-size: 0px + @baseFontSize;
+	.lineHeight(@pFactor);
+	font-family: @baseFontFamily;
+	font-weight: @baseFontWeight;
+	color: @baseFontColor;
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: @headingsFontFamily;
+	font-weight: @headingsFontWeight;
+	word-wrap: break-word;
+	color: @headingsFontColor;
+}
+
+h1
+{
+	.fontSize(@h1Factor);
+	.lineHeight(@h1Factor);
+	margin-top: 0;	
+	.marginBottom(@h1Factor);
+}
+
+h2
+{
+	.fontSize(@h2Factor);
+	.lineHeight(@h2Factor);
+	margin-top: 0;	
+	.marginBottom(@h2Factor);
+}
+
+h3
+{
+	.fontSize(@h3Factor);
+	.lineHeight(@h3Factor);
+	margin-top: 0;	
+	.marginBottom(@h3Factor);
+}
+
+h4
+{
+	.fontSize(@h4Factor);
+	.lineHeight(@h4Factor);
+	margin-top: 0;	
+	.marginBottom(@h4Factor);
+}
+
+blockquote, h5, h6, iframe, label, p, pre, address, td, th, ul, ol, dl, dd, hr, table
+{
+	.fontSize(@pFactor);
+	.lineHeight(@pFactor);
+	margin-top: 0;	
+	.marginBottom(@pFactor);
+}
+
+small
+{
+	.fontSize(@smallFactor);
+	.lineHeight(@smallFactor);
+	margin-top: 0;	
+	.marginBottom(@smallFactor);
+}
+
+strong
+{
+	font-weight: @strongFontWeight;
+}
+
+a
+{
+	color: @baseLinkColor;
+}
