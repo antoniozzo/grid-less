@@ -5,9 +5,9 @@ With Grid-Less you can create perfect responsive layout in just a few lines of c
 
 ## How to use
 
-Just import grid.min.less in you less file:
+Just import grid.pack.less in you less file:
 
-<pre><code>import 'grid.min.less';
+<pre><code>import 'grid.pack.less';
 </code></pre>
 
 This is how you create 3 responsive layouts with Grid-Less and media queries:
