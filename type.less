@@ -1,7 +1,7 @@
 /*
  * Type
  *
- * Edit: Antonio Rizzo 2013-06-14
+ * Edit: Antonio Rizzo 2013-06-25
  */
  
 
@@ -25,27 +25,27 @@
 .marginBottom(@size: 0, @multi: 1) { margin-bottom: 0em + @baseLine / (@baseFontSize + @size) * @multi; }
 .marginLeft(@size: 0, @multi: 1) { margin-left: 0em + @baseLine / (@baseFontSize + @size) * @multi; }
 
-.paddingTop(@size: 1, @border: 0) { padding-top: 0em + @baseLine / (@baseFontSize + @border) * @size; }
+.paddingTop(@size: 1, @border: 0) { padding-top: 0em + (@baseLine - @border) / @baseFontSize * @size; }
 .paddingRight(@size: 1) { padding-right: 0em + @baseLine / @baseFontSize * @size; }
-.paddingBottom(@size: 1, @border: 0) { padding-bottom: 0em + @baseLine / (@baseFontSize + @border) * @size; }
+.paddingBottom(@size: 1, @border: 0) { padding-bottom: 0em + (@baseLine - @border) / @baseFontSize * @size; }
 .paddingLeft(@size: 1) { padding-left: 0em + @baseLine / @baseFontSize * @size; }
 
-.height(@size: 1) { height: 0em + @baseLine / @baseFontSize * @size; }
+.height(@size: 1, @border: 0) { height: 0em + (@baseLine - @border) / @baseFontSize * @size; }
 .width(@size: 1) { width: 0em + @baseLine / @baseFontSize * @size; }
 
-.minHeight(@size: 1) { min-height: 0em + @baseLine / @baseFontSize * @size; }
+.minHeight(@size: 1, @border: 0) { min-height: 0em + (@baseLine - @border) / @baseFontSize * @size; }
 .minWidth(@size: 1) { min-width: 0em + @baseLine / @baseFontSize * @size; }
 
-.top(@size: 1) { top: 0em + @baseLine / @baseFontSize * @size; }
-.bottom(@size: 1) { bottom: 0em + @baseLine / @baseFontSize * @size; }
-.left(@size: 1) { left: 0em + @baseLine / @baseFontSize * @size; }
-.right(@size: 1) { right: 0em + @baseLine / @baseFontSize * @size; }
+.top(@size: 1) { top: 0em + @baseLine / @baseFontSize * @size;}
+.bottom(@size: 1) { bottom: 0em + @baseLine / @baseFontSize * @size;}
+.left(@size: 1) { left: 0em + @baseLine / @baseFontSize * @size;}
+.right(@size: 1) { right: 0em + @baseLine / @baseFontSize * @size;}
 
-.box(@size: 1)
+.box(@size: 1, @border: 0)
 {
-	.paddingTop(@size);
+	.paddingTop(@size, @border);
 	.paddingRight(@size);
-	.paddingBottom(@size);
+	.paddingBottom(@size, @border);
 	.paddingLeft(@size);
 }
 
